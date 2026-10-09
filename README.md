@@ -23,10 +23,12 @@ Dataset yang digunakan dalam proyek ini bersumber dari Kaggle:
 ## 3. Struktur Direktori
 ```text
 statistic_data/
-├── AGENTS.md                          # Panduan operasional asisten AI
-├── README.md                          # Dokumentasi utama proyek dan dataset
-└── dataset/
-    └── dataset_serangan_jantung.csv   # Berkas dataset utama (Kaggle)
+├── AGENTS.md                                             # Panduan operasional asisten AI
+├── README.md                                             # Dokumentasi utama proyek dan dataset
+├── dataset/
+│   └── dataset_serangan_jantung.csv                      # Berkas dataset utama (Kaggle)
+└── notebooks/
+    └── analisis_statistika_dan_probabilitas.ipynb        # Jupyter Notebook analisis statistika semester 3
 ```
 
 ---
@@ -55,6 +57,55 @@ Dataset memiliki 79.584 baris data pasien dengan rincian kolom sebagai berikut:
 
 ---
 
-## 5. Ketentuan Dokumentasi
+## 5. Cakupan Materi Statistika dan Probabilitas (Semester 3)
+Berkas `notebooks/analisis_statistika_dan_probabilitas.ipynb` memuat implementasi topik perkuliahan tingkat semester 3 yang terbagi ke dalam modul-modul berikut:
+
+1. **Modul 1: Persiapan Lingkungan dan Pemuatan Dataset**
+   - Penanganan nilai kosong (*missing values*) dan inspeksi tipe data.
+2. **Modul 2: Statistika Deskriptif**
+   - Ukuran Pemusatan: Mean, Median, Modus.
+   - Ukuran Letak: Kuartil ($Q_1, Q_2, Q_3$), Interquartile Range ($IQR$), dan deteksi pencilan (*outliers*).
+   - Ukuran Penyebaran: Jangkauan (*Range*), Varians Sampel ($s^2$), Standar Deviasi ($s$), dan Koefisien Variasi ($CV$).
+   - Ukuran Bentuk Distribusi: Skewness (kemencengan) dan Kurtosis (keruncingan).
+   - Visualisasi: Histogram, kurva KDE, dan Boxplot komparatif.
+3. **Modul 3: Teori Probabilitas Dasar, Peluang Bersyarat, dan Teorema Bayes**
+   - Probabilitas Marginal/Prior: $P(\text{Heart Attack})$, $P(\text{Diabetes})$, $P(\text{Smoker})$.
+   - Peluang Bersyarat: $P(\text{Heart Attack} \mid \text{Diabetes})$, Risiko Relatif (*Relative Risk*).
+   - Uji Independensi Probabilistik: Evaluasi $P(A \cap B)$ terhadap $P(A) \times P(B)$.
+   - Teorema Bayes: Estimasi probabilitas posterior kondisi komorbid pada penderita serangan jantung.
+4. **Modul 4: Distribusi Probabilitas Teoretis (Diskrit & Kontinu)**
+   - Distribusi Diskrit: Pemodelan Binomial dan Poisson untuk jumlah kasus serangan jantung pada kelompok pasien ($n=30$).
+   - Distribusi Kontinu: Pemodelan Distribusi Normal pada Tekanan Darah Sistolik dan standarisasi skor $Z$ untuk estimasi probabilitas hipertensi ($SBP \ge 140$).
+5. **Modul 5: Teori Penarikan Sampel, Teorema Limit Pusat (CLT), dan Estimasi Parameter**
+   - Eksperimen simulasi CLT dengan 1.500 pengulangan sampel pada ukuran $n = 5, 30, 100$.
+   - Estimasi Selang Kepercayaan (*Confidence Interval* 95%) untuk rata-rata usia ($t$-distribution) dan proporsi kejadian serangan jantung.
+6. **Modul 6: Pengujian Hipotesis Statistik**
+   - Uji Homogenitas Varians (Uji Levene).
+   - Uji Beda Rata-rata Dua Populasi Independen (*Two-Sample Independent $t$-Test*) untuk variabel usia pasien.
+   - Uji Independensi Chi-Square ($\chi^2$) untuk tabel kontingensi status komorbid terhadap kejadian serangan jantung.
+7. **Modul 7: Analisis Korelasi & Regresi Linier Sederhana**
+   - Koefisien Korelasi Pearson ($r$) dan Spearman ($\rho$) antara Usia dan Tekanan Darah Sistolik.
+   - Pembangunan model regresi linier $\hat{Y} = \beta_0 + \beta_1 X$, perhitungan $R^2$, RMSE, serta plot residual.
+8. **Modul 8: Ringkasan dan Kesimpulan Analisis**
+   - Sintesis temuan statistik deskriptif dan inferensial.
+
+---
+
+## 6. Petunjuk Menjalankan Notebook
+Untuk membuka dan mengeksekusi analisis pada Jupyter Notebook:
+
+1. Pastikan dependensi Python telah terpasang:
+   ```bash
+   pip install pandas numpy scipy matplotlib seaborn scikit-learn notebook
+   ```
+2. Buka berkas notebook menggunakan Jupyter Notebook atau VS Code:
+   ```bash
+   jupyter notebook notebooks/analisis_statistika_dan_probabilitas.ipynb
+   ```
+3. Seluruh sel telah dieksekusi sebelumnya sehingga grafik dan luaran tabel dapat langsung dipelajari tanpa harus menjalankan ulang.
+
+---
+
+## 7. Ketentuan Dokumentasi
 - Setiap kali terdapat **perubahan besar** pada proyek (penambahan skrip analisis, perubahan alur, transformasi dataset, dll.), berkas `README.md` ini wajib diperbarui agar selalu mencerminkan kondisi terkini proyek.
 - Seluruh isi dokumentasi wajib menggunakan Bahasa Indonesia dan tidak memuat emoji sesuai pedoman pada `AGENTS.md`.
