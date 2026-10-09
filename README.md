@@ -58,36 +58,48 @@ Dataset memiliki 79.584 baris data pasien dengan rincian kolom sebagai berikut:
 ---
 
 ## 5. Cakupan Materi Statistika dan Probabilitas (Semester 3)
-Berkas `notebooks/analisis_statistika_dan_probabilitas.ipynb` memuat implementasi topik perkuliahan tingkat semester 3 yang terbagi ke dalam modul-modul berikut:
+Berkas `notebooks/analisis_statistika_dan_probabilitas.ipynb` memuat implementasi topik perkuliahan tingkat semester 3 yang terbagi secara komprehensif ke dalam 11 modul:
 
 1. **Modul 1: Persiapan Lingkungan dan Pemuatan Dataset**
    - Penanganan nilai kosong (*missing values*) dan inspeksi tipe data.
-2. **Modul 2: Statistika Deskriptif**
+2. **Modul 2: Distribusi Frekuensi Berkelompok & Kurva Ogive**
+   - Penentuan jumlah kelas ($k$) menggunakan Aturan Sturges ($k = 1 + 3{,}322 \log_{10} n$).
+   - Perhitungan interval kelas ($c$), batas kelas, tepi kelas ($TB, TA$), titik tengah ($x_i$), frekuensi relatif, dan frekuensi kumulatif.
+   - Visualisasi kurva Ogive Positif ("kurang dari") dan Ogive Negatif ("lebih dari").
+3. **Modul 3: Statistika Deskriptif Komprehensif**
    - Ukuran Pemusatan: Mean, Median, Modus.
-   - Ukuran Letak: Kuartil ($Q_1, Q_2, Q_3$), Interquartile Range ($IQR$), dan deteksi pencilan (*outliers*).
-   - Ukuran Penyebaran: Jangkauan (*Range*), Varians Sampel ($s^2$), Standar Deviasi ($s$), dan Koefisien Variasi ($CV$).
+   - Ukuran Letak: Kuartil ($Q_1, Q_2, Q_3$), Interquartile Range ($IQR$), dan deteksi pencilan (*outliers*) metode Tukey.
+   - Ukuran Penyebaran: Jangkauan (*Range*), Varians Sampel ($s^2$), Standar Deviasi ($s$), Standar Galat Rata-rata ($SE_{\bar{x}}$), Deviasi Rata-rata (*Mean Absolute Deviation* / MAD), dan Koefisien Variasi ($CV$).
    - Ukuran Bentuk Distribusi: Skewness (kemencengan) dan Kurtosis (keruncingan).
-   - Visualisasi: Histogram, kurva KDE, dan Boxplot komparatif.
-3. **Modul 3: Teori Probabilitas Dasar, Peluang Bersyarat, dan Teorema Bayes**
+4. **Modul 4: Evaluasi Asumsi Normalitas**
+   - Analisis grafik melalui Quantile-Quantile Plot (Q-Q Plot) terhadap kurva normal baku.
+   - Pengujian formal statistik menggunakan Uji D'Agostino-Pearson Omnibus.
+5. **Modul 5: Teori Probabilitas Dasar, Peluang Bersyarat, dan Teorema Bayes**
    - Probabilitas Marginal/Prior: $P(\text{Heart Attack})$, $P(\text{Diabetes})$, $P(\text{Smoker})$.
    - Peluang Bersyarat: $P(\text{Heart Attack} \mid \text{Diabetes})$, Risiko Relatif (*Relative Risk*).
    - Uji Independensi Probabilistik: Evaluasi $P(A \cap B)$ terhadap $P(A) \times P(B)$.
    - Teorema Bayes: Estimasi probabilitas posterior kondisi komorbid pada penderita serangan jantung.
-4. **Modul 4: Distribusi Probabilitas Teoretis (Diskrit & Kontinu)**
+6. **Modul 6: Distribusi Probabilitas Teoretis (Diskrit & Kontinu)**
    - Distribusi Diskrit: Pemodelan Binomial dan Poisson untuk jumlah kasus serangan jantung pada kelompok pasien ($n=30$).
    - Distribusi Kontinu: Pemodelan Distribusi Normal pada Tekanan Darah Sistolik dan standarisasi skor $Z$ untuk estimasi probabilitas hipertensi ($SBP \ge 140$).
-5. **Modul 5: Teori Penarikan Sampel, Teorema Limit Pusat (CLT), dan Estimasi Parameter**
+7. **Modul 7: Teori Penarikan Sampel, Teorema Limit Pusat (CLT), dan Estimasi Parameter**
    - Eksperimen simulasi CLT dengan 1.500 pengulangan sampel pada ukuran $n = 5, 30, 100$.
    - Estimasi Selang Kepercayaan (*Confidence Interval* 95%) untuk rata-rata usia ($t$-distribution) dan proporsi kejadian serangan jantung.
-6. **Modul 6: Pengujian Hipotesis Statistik**
+8. **Modul 8: Pengujian Hipotesis Parametrik**
    - Uji Homogenitas Varians (Uji Levene).
-   - Uji Beda Rata-rata Dua Populasi Independen (*Two-Sample Independent $t$-Test*) untuk variabel usia pasien.
-   - Uji Independensi Chi-Square ($\chi^2$) untuk tabel kontingensi status komorbid terhadap kejadian serangan jantung.
-7. **Modul 7: Analisis Korelasi & Regresi Linier Sederhana**
-   - Koefisien Korelasi Pearson ($r$) dan Spearman ($\rho$) antara Usia dan Tekanan Darah Sistolik.
-   - Pembangunan model regresi linier $\hat{Y} = \beta_0 + \beta_1 X$, perhitungan $R^2$, RMSE, serta plot residual.
-8. **Modul 8: Ringkasan dan Kesimpulan Analisis**
-   - Sintesis temuan statistik deskriptif dan inferensial.
+   - Uji Beda Rata-rata Dua Populasi Independen (*Two-Sample Independent Welch $t$-Test*) untuk variabel usia.
+   - Uji Beda Dua Proporsi (*Two-Sample $Z$-Test for Proportions*) antara kelompok laki-laki dan perempuan.
+   - Analisis Varians Satu Arah (*One-Way ANOVA / $F$-Test*) untuk membandingkan tekanan darah sistolik antarkelompok usia.
+9. **Modul 9: Pengujian Hipotesis Non-Parametrik**
+   - Uji Kesesuaian Chi-Square (*Chi-Square Goodness-of-Fit Test*) untuk menguji keseimbangan rasio gender 50:50.
+   - Uji Independensi Chi-Square ($\chi^2$) untuk tabel kontingensi status diabetes terhadap kejadian serangan jantung.
+   - Uji Mann-Whitney $U$ sebagai alternatif non-parametrik uji beda dua kelompok usia.
+10. **Modul 10: Analisis Kovarians, Korelasi, dan Regresi Linier Sederhana**
+    - Perhitungan Kovarians Sampel $\operatorname{Cov}(X, Y)$.
+    - Koefisien Korelasi Pearson ($r$) dan Spearman ($\rho$) antara Usia dan Tekanan Darah Sistolik.
+    - Pembangunan model regresi linier OLS $\hat{Y} = \beta_0 + \beta_1 X$, perhitungan $R^2$, RMSE, serta plot residual.
+11. **Modul 11: Ringkasan Eksekutif dan Kesimpulan Analisis**
+    - Sintesis temuan statistik deskriptif dan inferensial.
 
 ---
 
