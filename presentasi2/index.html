@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentasi Analisis Statistika & Probabilitas (19 Poin)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="bg-ambient"></div>
+
+  <div class="presentation-container">
+
+    <!-- Top Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Header Dock -->
+    <header class="pres-header">
+      <div class="pres-brand">
+        <span class="brand-badge">Analisis Data</span>
+        <span class="brand-title">Faktor Risiko Serangan Jantung (19 Poin Presentasi)</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-icon" id="btnOverview" title="Daftar 19 Poin (O)">
+          <svg viewBox="0 0 24 24"><path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/></svg>
+        </button>
+        <button class="btn-icon" id="btnFullscreen" title="Layar Penuh (F)">
+          <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Slide Viewport -->
+    <main class="slide-viewport">
+
+      <!-- ================= 1. JUDUL ATAU TOPIK ANALISIS DATA ================= -->
+      <section class="slide active" id="slide-1">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 1 &bull; Judul / Topik Analisis Data</div>
+          <h1 class="slide-title">Analisis Statistik Deskriptif & Teori Probabilitas pada Faktor Risiko Penyakit Serangan Jantung</h1>
+          <p class="slide-subtitle">Heart Attack Risk Factors Analysis: Studi Eksploratif dan Pemodelan Probabilitas pada Populasi 79.583 Pasien Rekam Medis</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card highlight">
+              <span class="pill cyan" style="margin-bottom: 8px;">Topik Utama</span>
+              <div class="card-title">Faktor Risiko Kardiovaskular</div>
+              <p class="card-text">
+                Identifikasi hubungan pola demografi, pengukuran hemodinamik, dan riwayat komorbiditas kronis terhadap risiko serangan jantung berbasis data empiris.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 8px;">Fokus Kajian</span>
+              <div class="card-title">Pilar Metodologis</div>
+              <ul class="feature-list" style="margin-top: 6px;">
+                <li class="feature-item"><span class="dot-bullet"></span><span>Statistika Deskriptif: Pemusatan & Dispersi</span></li>
+                <li class="feature-item"><span class="dot-bullet"></span><span>Distribusi Frekuensi Berkelompok Sturges</span></li>
+                <li class="feature-item"><span class="dot-bullet"></span><span>Peluang Bersyarat & Teorema Bayes</span></li>
+                <li class="feature-item"><span class="dot-bullet"></span><span>Simulasi Sampling & Teorema Limit Pusat (CLT)</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="pill emerald" style="margin-bottom: 8px;">Tujuan Presentasi</span>
+              <div class="card-title">Wawasan Berbasis Bukti</div>
+              <p class="card-text">
+                Menyajikan gambaran objektif dan terukur mengenai profil risiko kesehatan jantung untuk mendukung pemahaman preventif klinis dan analisis data medis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 2. NAMA DAN NIM MAHASISWA ================= -->
+      <section class="slide" id="slide-2">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 2 &bull; Identitas Tim</div>
+          <h2 class="slide-title">2. Nama dan NIM Mahasiswa</h2>
+          <p class="slide-subtitle">Tim mahasiswa penyusun analisis statistika dan teori probabilitas</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card highlight">
+              <span class="pill cyan" style="margin-bottom: 10px;">Mahasiswa 1</span>
+              <div class="card-title" style="font-size: 1.15rem;">Muhamad Nur Akbar</div>
+              <div class="metric-val indigo" style="font-size: 1.5rem; margin: 6px 0;">250111019</div>
+              <p class="card-text">Semester 3 &bull; Statistika dan Probabilitas</p>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 10px;">Mahasiswa 2</span>
+              <div class="card-title" style="font-size: 1.15rem;">Taufan Nur Saffarudin</div>
+              <div class="metric-val indigo" style="font-size: 1.5rem; margin: 6px 0;">250111033</div>
+              <p class="card-text">Semester 3 &bull; Statistika dan Probabilitas</p>
+            </div>
+            <div class="card">
+              <span class="pill emerald" style="margin-bottom: 10px;">Mahasiswa 3</span>
+              <div class="card-title" style="font-size: 1.15rem;">Fathul Nur Hidayat</div>
+              <div class="metric-val indigo" style="font-size: 1.5rem; margin: 6px 0;">250111011</div>
+              <p class="card-text">Semester 3 &bull; Statistika dan Probabilitas</p>
+            </div>
+          </div>
+          <div class="card" style="margin-top: 16px; padding: 12px 18px; text-align: center;">
+            <span style="font-size: 0.9rem; color: var(--text-muted);">
+              Mata Kuliah: <strong style="color: var(--text-main);">Statistika dan Probabilitas</strong> &bull; Semester: <strong style="color: var(--accent-cyan-light);">Semester 3</strong>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 3. SUMBER DATASET ================= -->
+      <section class="slide" id="slide-3">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 3 &bull; Klasifikasi Sumber</div>
+          <h2 class="slide-title">3. Sumber Dataset (Data Sekunder atau Primer)</h2>
+          <p class="slide-subtitle">Identifikasi dan rasionalisasi jenis sumber perolehan data penelitian</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card highlight">
+              <span class="pill cyan" style="margin-bottom: 8px;">Klasifikasi Utama</span>
+              <div class="card-title" style="font-size: 1.3rem;">DATA SEKUNDER</div>
+              <p class="card-text" style="margin-top: 10px;">
+                Dataset yang digunakan diklasifikasikan sebagai <strong>Data Sekunder</strong> karena dihimpun dan dipublikasikan dari arsip rekam medis observasional klinis terdahulu di repositori terbuka Kaggle.
+              </p>
+              <p class="card-text" style="margin-top: 8px;">
+                Data <em>bukan</em> diperoleh melalui survei kuesioner, wawancara langsung, atau eksperimen laboratorium di lapangan yang dilakukan secara mandiri oleh penyusun (*data primer*).
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title">Keunggulan Penggunaan Data Sekunder</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li class="feature-item">
+                  <span class="dot-bullet emerald"></span>
+                  <span><strong>Skala Sampel Besar</strong>: Memungkinkan evaluasi pada 79.583 pasien yang sulit dicapai dengan survei mandiri.</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet emerald"></span>
+                  <span><strong>Efisiensi Penelitian</strong>: Menghemat alokasi waktu dan biaya operasional pengambilan data lapangan.</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet emerald"></span>
+                  <span><strong>Bebas Hambatan Etik Medis</strong>: Data rekam medis telah teranonimkan (*anonymized*) secara aman.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 4. ALASAN MEMILIH TOPIK ================= -->
+      <section class="slide" id="slide-4">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 4 &bull; Latar Belakang Masalah</div>
+          <h2 class="slide-title">4. Alasan Memilih Topik</h2>
+          <p class="slide-subtitle">Tiga pertimbangan fundamental dalam penentuan kajian risiko kardiovaskular</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <span class="pill rose" style="margin-bottom: 8px;">Urgensi Medis</span>
+              <div class="card-title">Ancaman Kematian Global</div>
+              <p class="card-text">
+                Penyakit serangan jantung merupakan penyebab mortalitas tertinggi di dunia. Analisis faktor risiko kuantitatif sangat penting untuk mendukung upaya deteksi preventif dini.
+              </p>
+            </div>
+            <div class="card highlight">
+              <span class="pill cyan" style="margin-bottom: 8px;">Relevansi Keilmuan</span>
+              <div class="card-title">Kesesuaian Teori Semester 3</div>
+              <p class="card-text">
+                Dataset memuat variabel kontinu dan kategorik yang lengkap, ideal untuk membuktikan konsep pemusatan, Aturan Sturges, peluang bersyarat, Teorema Bayes, hingga Central Limit Theorem.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 8px;">Kekuatan Statistik</span>
+              <div class="card-title">Ukuran Data Masif</div>
+              <p class="card-text">
+                Dengan 79.583 observasi pasien, data menghasilkan estimasi parameter yang sangat stabil (*high statistical power*) dan meminimalkan bias ukuran sampel kecil.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 5. PERMASALAHAN YANG INGIN DIPAHAMI ================= -->
+      <section class="slide" id="slide-5">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 5 &bull; Rumusan Persoalan</div>
+          <h2 class="slide-title">5. Permasalahan yang Ingin Dipahami</h2>
+          <p class="slide-subtitle">Empat fokus permasalahan analitis yang ingin dijawab melalui data</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">1. Profil Sebaran Klinis & Pemusatan</div>
+              <p class="card-text">
+                Bagaimana pola pemusatan (mean, median, modus) serta variabilitas sebaran usia dan tekanan darah sistolik pada seluruh pasien? Apakah kurvanya simetris?
+              </p>
+              <div class="card-title" style="margin-top: 14px;">2. Pengelompokan Frekuensi Sturges</div>
+              <p class="card-text">
+                Bagaimana distribusi frekuensi usia pasien jika diatur ke dalam kelas-kelas terstandar menggunakan Aturan Sturges dan kurva Ogive kumulatif?
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title">3. Peningkatan Risiko Faktor Komorbid</div>
+              <p class="card-text">
+                Seberapa besar peningkatan peluang terjadinya serangan jantung pada pasien dengan kondisi komorbid seperti diabetes, ginjal kronis, atau fibrilasi atrium?
+              </p>
+              <div class="card-title" style="margin-top: 14px;">4. Pembalikan Peluang Bayes & Perilaku CLT</div>
+              <p class="card-text">
+                Berapa peluang posterior pasien serangan jantung mengidap komorbiditas tertentu, dan bagaimana perilaku rata-rata sampel membuktikan Teorema Limit Pusat?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 6. MANFAAT ANALISIS DATA ================= -->
+      <section class="slide" id="slide-6">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 6 &bull; Manfaat & Luaran</div>
+          <h2 class="slide-title">6. Manfaat Analisis Data</h2>
+          <p class="slide-subtitle">Dampak positif penelitian baik secara teoritis perkuliahan maupun praktis medis</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card highlight">
+              <div class="card-title">Manfaat Akademis (Teoretis) <span class="pill cyan">Silabus Kuliah</span></div>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span>Menerapkan perhitungan statistik deskriptif (Mean, Median, Modus, IQR, Varians, Standar Deviasi) pada kasus nyata.</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span>Membuktikan validitas Aturan Sturges, Aksioma Kolmogorov, dan pemodelan peluang bersyarat secara empiris.</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span>Menguji Teorema Bayes dan simulasi Central Limit Theorem (CLT) berbasis komputasi Python.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">Manfaat Praktis (Klinis) <span class="pill emerald">Dunia Medis</span></div>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li class="feature-item">
+                  <span class="dot-bullet emerald"></span>
+                  <span>Menyediakan bukti kuantitatif (*evidence-based*) mengenai rasio risiko relatif (*Relative Risk*) komorbiditas.</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet emerald"></span>
+                  <span>Memberikan acuan bagi tenaga medis dalam mengidentifikasi profil kelompok pasien dengan ancaman risiko kritis.</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet emerald"></span>
+                  <span>Mendukung edukasi preventif pola hidup sehat bagi masyarakat umum.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 7. ASAL DATASET DAN TAUTAN SUMBER ================= -->
+      <section class="slide" id="slide-7">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 7 &bull; Provenansi Data</div>
+          <h2 class="slide-title">7. Asal Dataset dan Tautan Sumber</h2>
+          <p class="slide-subtitle">Rincian repositori publik penyedia data dan lokasi berkas lokal repositori</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-1-2">
+            <div class="card">
+              <div class="card-title">Penyedia & Repositori</div>
+              <div class="metric-box" style="padding: 12px; margin-bottom: 10px;">
+                <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Platform Sumber</span>
+                <strong style="color: var(--accent-cyan-light); font-size: 1.1rem;">Kaggle Datasets</strong>
+              </div>
+              <div class="metric-box" style="padding: 12px; margin-bottom: 0;">
+                <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Author / Uploader</span>
+                <strong style="color: var(--accent-indigo-light); font-size: 1.1rem;">headsetbagus12</strong>
+              </div>
+            </div>
+            <div class="card highlight">
+              <div class="card-title">Tautan Akses & Berkas Lokal <span class="pill cyan">Terbuka</span></div>
+              <ul class="feature-list" style="margin-top: 10px;">
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span><strong>Nama Dataset Resmi</strong>: <em>Heart Attack CSV Dataset</em></span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span><strong>Tautan Sumber Daring</strong>:<br>
+                  <a href="https://www.kaggle.com/datasets/headsetbagus12/heart-attack-csv-dataset" target="_blank" style="color: var(--accent-cyan-light); word-break: break-all; font-size: 0.88rem;">https://www.kaggle.com/datasets/headsetbagus12/heart-attack-csv-dataset</a></span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span><strong>Lokasi Berkas Lokal</strong>: <code>dataset/dataset_serangan_jantung.csv</code> (Ukuran: 4,16 MB).</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 8. JUMLAH BARIS DAN KOLOM ================= -->
+      <section class="slide" id="slide-8">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 8 &bull; Dimensi Matriks</div>
+          <h2 class="slide-title">8. Jumlah Baris dan Kolom</h2>
+          <p class="slide-subtitle">Dimensi fisik dan skala observasi dataset yang dievaluasi</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="metric-box" style="padding: 20px; align-items: center; text-align: center;">
+              <span class="metric-val" style="font-size: 2.8rem;">79.583</span>
+              <span class="metric-lbl" style="font-size: 0.85rem; margin-top: 8px;">Total Baris (Observasi Pasien)</span>
+            </div>
+            <div class="metric-box" style="padding: 20px; align-items: center; text-align: center;">
+              <span class="metric-val indigo" style="font-size: 2.8rem;">16</span>
+              <span class="metric-lbl" style="font-size: 0.85rem; margin-top: 8px;">Total Kolom (Atribut Data Medis)</span>
+            </div>
+            <div class="metric-box" style="padding: 20px; align-items: center; text-align: center;">
+              <span class="metric-val emerald" style="font-size: 2.8rem;">1.273.328</span>
+              <span class="metric-lbl" style="font-size: 0.85rem; margin-top: 8px;">Total Entri Sel Data Matriks</span>
+            </div>
+          </div>
+          <div class="card" style="margin-top: 14px;">
+            <p class="card-text">
+              <strong>Keterangan Dimensi</strong>: Seluruh 79.583 baris merepresentasikan catatan rekam medis unik pasien tanpa duplikasi kode identitas pasien (`patient_id`), memberikan basis pengamatan yang sangat kokoh untuk pemodelan populasi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 9. GAMBARAN UMUM ISI DATA ================= -->
+      <section class="slide" id="slide-9">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 9 &bull; Cakupan Spektrum Data</div>
+          <h2 class="slide-title">9. Gambaran Umum Isi Data</h2>
+          <p class="slide-subtitle">Spektrum informasi klinis, demografis, dan hasil pemantauan medis pasien</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-4">
+            <div class="card">
+              <span class="pill cyan" style="margin-bottom: 8px;">Demografi</span>
+              <div class="card-title">Profil Pasien</div>
+              <p class="card-text">
+                Mencatat identitas unik pasien (`patient_id`), jenis kelamin (`gender` 50,5% pria, 49,5% wanita), dan usia (`age` rentang 18 - 79 tahun).
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 8px;">Fisik & Paru</span>
+              <div class="card-title">Hemodinamik</div>
+              <p class="card-text">
+                Hasil pengukuran Indeks Massa Tubuh (`body_mass_index`), Tekanan Darah Sistolik (`systolic_blood_pressure`), dan kapasitas paru FEV1.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill amber" style="margin-bottom: 8px;">Gaya Hidup</span>
+              <div class="card-title">8 Komorbiditas</div>
+              <p class="card-text">
+                Status merokok, penanganan hipertensi, riwayat keluarga kardiovaskular, fibrilasi atrium, ginjal kronis, artritis, diabetes, dan PPOK.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill rose" style="margin-bottom: 8px;">Luaran Klinis</span>
+              <div class="card-title">Target Serangan</div>
+              <p class="card-text">
+                Lama observasi tahunan (`time_to_event_or_censoring`) dan status target serangan jantung (`heart_attack`: 0 = Tidak, 1 = Mengalami).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 10. NAMA DAN PENGERTIAN VARIABEL ================= -->
+      <section class="slide" id="slide-10">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 10 &bull; Kamus Variabel</div>
+          <h2 class="slide-title">10. Nama dan Pengertian Variabel</h2>
+          <p class="slide-subtitle">Definisi operasional ke-16 atribut data rekam medis pasien</p>
+        </div>
+        <div class="slide-body">
+          <div class="table-container">
+            <table class="pres-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Kolom</th>
+                  <th>Definisi Operasional / Pengertian</th>
+                  <th>Satuan / Nilai</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><code>patient_id</code></td><td>Nomor identitas unik rekam medis pasien</td><td>Kode Teks Alfanumerik</td></tr>
+                <tr><td>2</td><td><code>gender</code></td><td>Jenis kelamin pasien (M = Laki-laki, F = Perempuan)</td><td>Kategori Biner (M / F)</td></tr>
+                <tr><td>3</td><td><code>age</code></td><td>Usia pasien pada saat dilakukan pencatatan medis</td><td>Tahun Bulat (18 - 79)</td></tr>
+                <tr><td>4</td><td><code>body_mass_index</code></td><td>Indeks Massa Tubuh (BMI) pasien</td><td>kg/m^2 (Kontinu)</td></tr>
+                <tr><td>5</td><td><code>smoker</code></td><td>Status kebiasaan merokok aktif pasien</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>6</td><td><code>systolic_blood_pressure</code></td><td>Nilai tekanan darah sistolik pasien</td><td>mmHg (Kontinu)</td></tr>
+                <tr><td>7</td><td><code>hypertension_treated</code></td><td>Status mendapatkan penanganan medis untuk hipertensi</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>8</td><td><code>family_history_...</code></td><td>Riwayat penyakit kardiovaskular pada keluarga kandung</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>9</td><td><code>atrial_fibrillation</code></td><td>Diagnosis gangguan irama jantung fibrilasi atrium</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>10</td><td><code>chronic_kidney_disease</code></td><td>Riwayat diagnosis penyakit ginjal kronis</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>11</td><td><code>rheumatoid_arthritis</code></td><td>Riwayat radang sendi autoimun / artritis reumatoid</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>12</td><td><code>diabetes</code></td><td>Riwayat diagnosis kencing manis / diabetes melitus</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>13</td><td><code>chronic_obstructive_...</code></td><td>Penyakit paru obstruktif kronis (PPOK)</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+                <tr><td>14</td><td><code>forced_expiratory_...</code></td><td>Volume ekspirasi paksa detik pertama (FEV1)</td><td>Liter (Kontinu)</td></tr>
+                <tr><td>15</td><td><code>time_to_event_...</code></td><td>Durasi pengamatan hingga kejadian/censoring</td><td>Tahun (1 - 10)</td></tr>
+                <tr><td>16</td><td><code>heart_attack</code></td><td>Label target luaran klinis serangan jantung</td><td>Biner (0 = Tidak, 1 = Ya)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 11. JENIS DATA ================= -->
+      <section class="slide" id="slide-11">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 11 &bull; Taksonomi Sifat Data</div>
+          <h2 class="slide-title">11. Jenis Data: Kategorikal, Diskrit & Kontinu</h2>
+          <p class="slide-subtitle">Klasifikasi skala pengukuran data berdasarkan teori statistika</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <span class="pill cyan" style="margin-bottom: 8px;">Kategorikal (Nominal)</span>
+              <div class="card-title">11 Variabel Kategori</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li class="feature-item"><span class="dot-bullet"></span><span><code>patient_id</code> (Label kode)</span></li>
+                <li class="feature-item"><span class="dot-bullet"></span><span><code>gender</code> (Biner: M / F)</span></li>
+                <li class="feature-item"><span class="dot-bullet"></span><span>8 Indikator Komorbiditas (0 / 1)</span></li>
+                <li class="feature-item"><span class="dot-bullet rose"></span><span><code>heart_attack</code> (Target 0 / 1)</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 8px;">Numerik Diskret (Rasio)</span>
+              <div class="card-title">2 Variabel Terhitung</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li class="feature-item"><span class="dot-bullet indigo"></span><span><code>age</code> (Usia bilangan bulat tahun: 18 s.d. 79 tahun)</span></li>
+                <li class="feature-item"><span class="dot-bullet indigo"></span><span><code>time_to_event_or_censoring</code> (Lama pemantauan bulat tahun: 1 s.d. 10)</span></li>
+              </ul>
+              <p class="card-text" style="margin-top: 10px; font-size: 0.8rem;">
+                Bersifat terhitung (*countable*) tanpa nilai pecahan di antara dua bilangan berurutan.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill emerald" style="margin-bottom: 8px;">Numerik Kontinu (Rasio)</span>
+              <div class="card-title">3 Variabel Terukur</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li class="feature-item"><span class="dot-bullet emerald"></span><span><code>systolic_blood_pressure</code> (Tekanan darah: 50 - 208 mmHg)</span></li>
+                <li class="feature-item"><span class="dot-bullet emerald"></span><span><code>body_mass_index</code> (BMI: 15,2 - 55,3 kg/m^2)</span></li>
+                <li class="feature-item"><span class="dot-bullet emerald"></span><span><code>forced_expiratory_volume_1</code> (FEV1: kapasitas paru dalam liter)</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 12. VARIABEL YANG BERPOTENSI DIANALISIS ================= -->
+      <section class="slide" id="slide-12">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 12 &bull; Variabel Analisis Utama</div>
+          <h2 class="slide-title">12. Variabel yang Berpotensi Dianalisis</h2>
+          <p class="slide-subtitle">Pemilihan variabel inti yang dievaluasi secara mendalam pada pengujian</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card highlight">
+              <span class="pill rose" style="margin-bottom: 8px;">Variabel Luaran Target</span>
+              <div class="card-title"><code>heart_attack</code></div>
+              <div class="metric-val rose" style="font-size: 1.8rem; margin: 6px 0;">6,64%</div>
+              <p class="card-text">
+                Status luaran kejadian klinis (5.288 pasien positif). Berfungsi sebagai variabel dependen dalam seluruh pengujian asosiasi probabilitas dan komparasi kelompok.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill cyan" style="margin-bottom: 8px;">Variabel Numerik Eksploratif</span>
+              <div class="card-title"><code>age</code> & <code>systolic_bp</code></div>
+              <div class="metric-val" style="font-size: 1.8rem; margin: 6px 0;">46,9 Th &bull; 129,9 mmHg</div>
+              <p class="card-text">
+                Dianalisis ukuran pemusatan, penyebaran, tabel interval Aturan Sturges, kurva normal lonceng Gauss, standarisasi skor Z, dan konvergensi CLT.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 8px;">Komorbiditas Kritis</span>
+              <div class="card-title"><code>diabetes</code>, <code>af</code>, <code>ckd</code></div>
+              <div class="metric-val indigo" style="font-size: 1.8rem; margin: 6px 0;">Relative Risk s.d. 4,41x</div>
+              <p class="card-text">
+                Faktor risiko penyakit penyerta yang dievaluasi untuk menguji peluang bersyarat, independensi stokastik, dan estimasi posterior Teorema Bayes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 13. PERTANYAAN YANG INGIN DIJAWAB ================= -->
+      <section class="slide" id="slide-13">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 13 &bull; Sasaran Analisis</div>
+          <h2 class="slide-title">13. Pertanyaan yang Ingin Dijawab</h2>
+          <p class="slide-subtitle">Enam pertanyaan penelitian terarah yang diselesaikan melalui analisis data</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span><strong>1. Karakteristik Pemusatan</strong>: Berapa nilai rata-rata, median, dan modus dari usia serta tekanan darah sistolik pasien?</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span><strong>2. Distribusi Frekuensi</strong>: Bagaimana sebaran usia pasien jika dikelompokkan secara terstandar menggunakan Aturan Sturges?</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet"></span>
+                  <span><strong>3. Peluang Dasar Populasi</strong>: Berapa probabilitas dasar (*prior probability*) seorang pasien mengalami serangan jantung?</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="dot-bullet indigo"></span>
+                  <span><strong>4. Peningkatan Risiko Komorbid</strong>: Apakah pasien dengan diabetes atau ginjal kronis memiliki peluang serangan jantung lebih tinggi (*Relative Risk*)?</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet indigo"></span>
+                  <span><strong>5. Teorema Bayes</strong>: Jika pasien terkena serangan jantung, berapa probabilitas posterior ia mengidap riwayat penyakit tertentu?</span>
+                </li>
+                <li class="feature-item">
+                  <span class="dot-bullet indigo"></span>
+                  <span><strong>6. Teorema Limit Pusat (CLT)</strong>: Bagaimana perilaku rata-rata sampel ketika ukuran sampel diperbesar ($n = 5 \to 500$)?</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 14. STATISTIK DESKRIPTIF YANG AKAN DIGUNAKAN ================= -->
+      <section class="slide" id="slide-14">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 14 &bull; Statistik Deskriptif</div>
+          <h2 class="slide-title">14. Statistik Deskriptif yang Akan Digunakan</h2>
+          <p class="slide-subtitle">Penerapan ukuran pemusatan, penyebaran, aturan Sturges, dan deteksi pencilan</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-1-2">
+            <div>
+              <div class="metric-box">
+                <span class="metric-val">46,94 Th</span>
+                <span class="metric-lbl">Mean Usia (Median: 47,00 | Modus: 22,00)</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-val indigo">18 Kelas</span>
+                <span class="metric-lbl">Aturan Sturges (k = 18, interval c = 4 th)</span>
+              </div>
+              <div class="metric-box" style="margin-bottom: 0;">
+                <span class="metric-val emerald">17,68 mmHg</span>
+                <span class="metric-lbl">Standar Deviasi SBP (IQR: 23,0 mmHg)</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">Histogram Sebaran Usia (18 Kelas Sturges) <span class="pill cyan">Grafik</span></div>
+              <div class="chart-wrapper">
+                <canvas id="chartSturges"></canvas>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;">
+                Metode Tukey: Ditemukan 0 outlier pada usia, 715 outlier (0,99%) pada tekanan darah sistolik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 15. RENCANA VISUALISASI DATA ================= -->
+      <section class="slide" id="slide-15">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 15 &bull; Instrumen Grafis</div>
+          <h2 class="slide-title">15. Rencana Visualisasi Data</h2>
+          <p class="slide-subtitle">Empat bentuk representasi visual utama untuk menyajikan sebaran dan akumulasi data</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-1-2">
+            <div class="card">
+              <div class="card-title">Empat Instrumen Visual</div>
+              <ul class="feature-list" style="margin-top: 6px;">
+                <li class="feature-item"><span class="dot-bullet"></span><span><strong>Histogram & KDE</strong>: Melihat bentuk lonceng kepadatan data numerik.</span></li>
+                <li class="feature-item"><span class="dot-bullet"></span><span><strong>Kurva Ogive</strong>: Membaca frekuensi kumulatif kurang dari & lebih dari.</span></li>
+                <li class="feature-item"><span class="dot-bullet rose"></span><span><strong>Boxplot Komparatif</strong>: Menilai disparitas nilai dan mendeteksi pencilan Tukey.</span></li>
+                <li class="feature-item"><span class="dot-bullet emerald"></span><span><strong>Bar Chart Proporsi</strong>: Membandingkan rasio kejadian komorbiditas.</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">Kurva Ogive Frekuensi Kumulatif Usia <span class="pill cyan">Ogive</span></div>
+              <div class="chart-wrapper">
+                <canvas id="chartOgive"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 16. KONSEP PROBABILITAS YANG BERPOTENSI DITERAPKAN ================= -->
+      <section class="slide" id="slide-16">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 16 &bull; Teori Probabilitas Terapan</div>
+          <h2 class="slide-title">16. Konsep Probabilitas yang Diterapkan</h2>
+          <p class="slide-subtitle">Penerapan aksioma dasar, peluang bersyarat, Teorema Bayes, dan Teorema Limit Pusat</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-1-2">
+            <div class="card">
+              <div class="card-title">Rangkuman Nilai Kunci Teori Peluang</div>
+              <ul class="feature-list" style="margin-top: 6px;">
+                <li class="feature-item"><span class="dot-bullet"></span><span><strong>Peluang Marginal</strong>: P(Heart Attack) = 0,0664 (6,64%).</span></li>
+                <li class="feature-item"><span class="dot-bullet"></span><span><strong>Aksioma Komplemen</strong>: P(HA^c) = 1 - 0,0664 = 0,9336 (93,36%).</span></li>
+                <li class="feature-item"><span class="dot-bullet indigo"></span><span><strong>Teorema Bayes</strong>: Peluang pasien serangan jantung mengidap diabetes melonjak menjadi <strong>23,92%</strong> (prior 9,50%).</span></li>
+                <li class="feature-item"><span class="dot-bullet emerald"></span><span><strong>Distribusi Normal & Skor Z</strong>: Peluang hipertensi lanjut (SBP &ge; 140 mmHg) sebesar <strong>28,43%</strong>.</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">Peluang Bersyarat: Relative Risk (RR) Komorbid <span class="pill rose">Asosiasi</span></div>
+              <div class="chart-wrapper">
+                <canvas id="chartRR"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 17. HASIL PEMERIKSAAN KESIAPAN DATASET ================= -->
+      <section class="slide" id="slide-17">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 17 &bull; Kesiapan Dataset</div>
+          <h2 class="slide-title">17. Hasil Pemeriksaan Kesiapan Dataset</h2>
+          <p class="slide-subtitle">Audit keutuhan data, validitas tipe variabel, dan kelayakan pemodelan analisis data</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <span class="pill emerald" style="margin-bottom: 8px;">Integritas Format</span>
+              <div class="card-title">Format CSV Bersih</div>
+              <p class="card-text">
+                Dataset berukuran 79.583 baris x 16 kolom terbaca utuh tanpa baris rusak (*corrupted rows*) atau kendala delimiter.
+              </p>
+            </div>
+            <div class="card highlight">
+              <span class="pill cyan" style="margin-bottom: 8px;">13 Kolom Lengkap 100%</span>
+              <div class="card-title">Variabel Inti Bersih</div>
+              <p class="card-text">
+                Variabel target `heart_attack`, `age`, `gender`, `smoker`, dan seluruh penyakit komorbid bebas dari nilai kosong (*0 missing values*).
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill amber" style="margin-bottom: 8px;">3 Kolom Missing Data</span>
+              <div class="card-title">Kekosongan Terukur</div>
+              <p class="card-text">
+                SBP (9,82% kosong), BMI (29,95% kosong), dan FEV1 (69,43% kosong). Telah dipersiapkan strategi penanganan yang tepat.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="margin-top: 14px; padding: 12px 18px; text-align: center; border-color: var(--accent-emerald);">
+            <strong style="color: var(--accent-emerald);">Kesimpulan Kesiapan:</strong>
+            <span style="color: var(--text-muted); font-size: 0.9rem;">
+              Dataset <strong>Sangat Siap dan Layak Digunakan</strong> untuk seluruh pemodelan analisis statistik deskriptif dan inferensial.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 18. KENDALA YANG DITEMUKAN ================= -->
+      <section class="slide" id="slide-18">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 18 &bull; Hambatan & Mitigasi</div>
+          <h2 class="slide-title">18. Kendala yang Ditemukan & Solusinya</h2>
+          <p class="slide-subtitle">Dua kendala data yang teridentifikasi beserta penyelesaian metodologisnya</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <span class="pill rose" style="margin-bottom: 8px;">Kendala 1</span>
+              <div class="card-title">Missing Values pada Kolom Fisik Tertentu</div>
+              <p class="card-text">
+                Variabel kapasitas paru FEV1 (69,43%) dan BMI (29,95%) memiliki missing values yang cukup tinggi karena tes spirometri bersifat opsional.
+              </p>
+              <div class="metric-box" style="margin-top: 12px; margin-bottom: 0; padding: 10px;">
+                <strong style="color: var(--accent-emerald);">Solusi Metodologis:</strong>
+                <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 2px;">
+                  Menerapkan <em>Complete-Case Analysis per Variabel</em> tanpa menghapus baris pasien secara keseluruhan, sehingga keutuhan populasi (79.583 pasien) tetap terjaga.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 8px;">Kendala 2</span>
+              <div class="card-title">Ketimpangan Kelas Target (*Class Imbalance*)</div>
+              <p class="card-text">
+                Kasus positif serangan jantung hanya 6,64% (5.288 pasien) berbanding 93,36% pasien non-kasus. Perbandingan angka absolut dapat bias.
+              </p>
+              <div class="metric-box" style="margin-top: 12px; margin-bottom: 0; padding: 10px;">
+                <strong style="color: var(--accent-cyan-light);">Solusi Metodologis:</strong>
+                <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 2px;">
+                  Menggunakan ukuran asosiasi proporsional (<em>Relative Risk</em>, probabilitas kondisional, dan Teorema Bayes) agar evaluasi risiko tetap objektif.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 19. RENCANA ANALISIS SELANJUTNYA ================= -->
+      <section class="slide" id="slide-19">
+        <div class="slide-header">
+          <div class="slide-tag">Poin 19 &bull; Roadmap Analisis Lanjutan</div>
+          <h2 class="slide-title">19. Rencana Analisis Selanjutnya</h2>
+          <p class="slide-subtitle">Roadmap pengembangan analisis inferensial, uji hipotesis, dan pemodelan prediktif</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-4">
+            <div class="card">
+              <span class="pill cyan" style="margin-bottom: 8px;">Pilar 1</span>
+              <div class="card-title">Regresi Logistik Multivariat</div>
+              <p class="card-text">
+                Memodelkan peluang kejadian serangan jantung secara simultan untuk menakar kontribusi independen masing-masing faktor komorbiditas.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill indigo" style="margin-bottom: 8px;">Pilar 2</span>
+              <div class="card-title">Uji Hipotesis Inferensial</div>
+              <p class="card-text">
+                Menjalankan pengujian statistik formal: Two-sample Welch t-test (usia), Chi-Square independensi, dan ANOVA satu arah pada tekanan darah.
+              </p>
+            </div>
+            <div class="card highlight">
+              <span class="pill emerald" style="margin-bottom: 8px;">Pilar 3</span>
+              <div class="card-title">Stratifikasi Risiko Klinis</div>
+              <p class="card-text">
+                Mengembangkan sistem skoring risiko berbasis kalkulasi posterior Teorema Bayes untuk mendukung klasifikasi dini pasien berisiko tinggi.
+              </p>
+            </div>
+            <div class="card">
+              <span class="pill amber" style="margin-bottom: 8px;">Pilar 4</span>
+              <div class="card-title">Validasi Silang Model</div>
+              <p class="card-text">
+                Melakukan validasi silang pada subsampel acak untuk mengukur kestabilan parameter penduga dan mencegah overfitting.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="margin-top: 16px; padding: 14px 20px; text-align: center; border-color: var(--border-focus);">
+            <strong style="color: var(--text-main); font-size: 0.95rem;">
+              Terima Kasih &bull; Tim Presentasi Analisis Data
+            </strong>
+            <p style="font-size: 0.82rem; color: var(--text-dim); margin-top: 4px;">
+              Muhamad Nur Akbar (250111019) &bull; Taufan Nur Saffarudin (250111033) &bull; Fathul Nur Hidayat (250111011)
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Dock Navigation -->
+    <footer class="pres-footer">
+      <div class="slide-counter" id="slideCounter">
+        <span>01</span> / 19
+      </div>
+      <div class="keyboard-hint">
+        Gunakan tombol <span class="kbd">&larr;</span> <span class="kbd">&rarr;</span> atau <span class="kbd">Spasi</span> &bull; <span class="kbd">F</span> Layar Penuh &bull; <span class="kbd">O</span> Ringkasan 19 Poin
+      </div>
+      <div class="footer-nav">
+        <button class="btn-nav" id="btnPrev" disabled>
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          Sebelumnya
+        </button>
+        <button class="btn-nav" id="btnNext">
+          Selanjutnya
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Overview Modal Drawer (19 Points) -->
+  <div class="overview-modal" id="overviewModal">
+    <div class="overview-header">
+      <h3 class="overview-title">Daftar Lengkap 19 Poin Presentasi Analisis Data</h3>
+      <button class="btn-icon" id="btnCloseOverview" title="Tutup (Esc)">
+        <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+    </div>
+    <div class="overview-grid" id="overviewGrid"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

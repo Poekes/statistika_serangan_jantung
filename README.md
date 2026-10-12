@@ -27,11 +27,22 @@ statistic_data/
 ├── README.md                                             # Dokumentasi utama proyek dan dataset
 ├── dataset/
 │   └── dataset_serangan_jantung.csv                      # Berkas dataset utama (Kaggle)
-└── notebooks/
-    ├── analisis_statistika_dan_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 1 (11 modul)
-    └── v2/
-        ├── RANGKUMAN_MATERI.md                           # Dokumen rangkuman konsep & teori 7 modul statistika
-        └── analisis_statistika_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 2 (7 modul kurikulum)
+├── notebooks/
+│   ├── analisis_statistika_dan_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 1 (11 modul)
+│   └── v2/
+│       ├── BAHAN_PRESENTASI.md                           # Bahan presentasi UTS (19 poin evaluasi data & probabilitas)
+│       ├── RANGKUMAN_MATERI.md                           # Dokumen rangkuman konsep & teori 7 modul statistika
+│       ├── analisis_statistika_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 2 (7 modul kurikulum)
+│       ├── presentasi/ -> ../../presentasi               # Tautan simbolik ke aplikasi slide presentasi umum
+│       └── presentasi2/ -> ../../presentasi2             # Tautan simbolik ke slide presentasi khusus 19 poin (alias presensi2)
+├── presentasi/
+│   ├── app.js                                            # Logika interaktif slide, keyboard handler, dan Chart.js
+│   ├── index.html                                        # Aplikasi slide tayang presentasi interaktif (20 slide)
+│   └── style.css                                         # Gaya desain modern dark theme & visualisasi responsif
+└── presentasi2/ (alias: presensi2)
+    ├── app.js                                            # Logika interaktif slide 19 poin dan integrasi Chart.js
+    ├── index.html                                        # Aplikasi slide tayang khusus 19 poin persis penugasan UTS
+    └── style.css                                         # Desain tata letak visual modern & responsif
 ```
 
 ---
@@ -165,7 +176,28 @@ Untuk membuka dan mengeksekusi analisis pada Jupyter Notebook:
 
 ---
 
-## 8. Ketentuan Dokumentasi
+## 8. Petunjuk Menjalankan Slide Presentasi Interaktif
+Slide presentasi dibangun menggunakan HTML, CSS, dan JavaScript interaktif murni (tanpa ketergantungan server khusus). Anda dapat membukanya secara langsung:
+
+1. Melalui browser web:
+   - Slide Umum (20 slide): Buka berkas `presentasi/index.html`.
+   - Slide Khusus 19 Poin Penugasan: Buka berkas `presentasi2/index.html` (atau melalui folder alias `presensi2/index.html`).
+2. Melalui server lokal (opsional):
+   ```bash
+   python3 -m http.server 8000
+   ```
+   Buka peramban pada alamat `http://localhost:8000/presentasi2/` atau `http://localhost:8000/presentasi/`.
+
+Tombol pintasan keyboard selama presentasi:
+- `Panah Kanan` / `Spasi` / `Page Down`: Berpindah ke slide berikutnya.
+- `Panah Kiri` / `Page Up` / `Backspace`: Berpindah ke slide sebelumnya.
+- `F`: Mengaktifkan atau menonaktifkan mode layar penuh (*fullscreen*).
+- `O`: Membuka laci ringkasan seluruh slide (*grid overview*) untuk berpindah ke slide mana pun.
+- `Home` / `End`: Menuju ke slide pertama atau terakhir.
+
+---
+
+## 9. Ketentuan Dokumentasi
 - Setiap kali terdapat **perubahan besar** pada proyek (penambahan skrip analisis, perubahan alur, transformasi dataset, dll.), berkas `README.md` ini wajib diperbarui agar selalu mencerminkan kondisi terkini proyek.
 - Seluruh isi dokumentasi wajib menggunakan Bahasa Indonesia dan tidak memuat emoji sesuai pedoman pada `AGENTS.md`.
 
