@@ -27,10 +27,11 @@ statistic_data/
 ├── README.md                                             # Dokumentasi utama proyek dan dataset
 ├── dataset/
 │   └── dataset_serangan_jantung.csv                      # Berkas dataset utama (Kaggle)
-├── notebooks/
-│   └── analisis_statistika_dan_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 1 (11 modul)
-└── v2/
-    └── analisis_statistika_probabilitas.ipynb            # Jupyter Notebook analisis statistik versi 2 (7 modul kurikulum)
+└── notebooks/
+    ├── analisis_statistika_dan_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 1 (11 modul)
+    └── v2/
+        ├── RANGKUMAN_MATERI.md                           # Dokumen rangkuman konsep & teori 7 modul statistika
+        └── analisis_statistika_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 2 (7 modul kurikulum)
 ```
 
 ---
@@ -105,8 +106,8 @@ Berkas `notebooks/analisis_statistika_dan_probabilitas.ipynb` memuat implementas
 
 ---
 
-## 6. Cakupan Materi Analisis Notebook Versi 2 (`v2/analisis_statistika_probabilitas.ipynb`)
-Berkas notebook pada folder `v2/` disusun khusus mengikuti silabus perkuliahan kampus yang berfokus pada 7 topik inti dan mengevaluasi seluruh data populasi (79.583 pasien):
+## 6. Cakupan Materi Analisis Notebook Versi 2 (`notebooks/v2/analisis_statistika_probabilitas.ipynb`)
+Berkas notebook pada folder `notebooks/v2/` disusun khusus mengikuti silabus perkuliahan kampus yang berfokus pada 7 topik inti dan mengevaluasi seluruh data populasi (79.583 pasien):
 
 1. **Pengantar Statistika dan Jenis Data**
    - Definisi statistika deskriptif dan inferensial.
@@ -158,7 +159,7 @@ Untuk membuka dan mengeksekusi analisis pada Jupyter Notebook:
      ```
    - Untuk versi 2 (7 modul kurikulum silabus):
      ```bash
-     jupyter notebook v2/analisis_statistika_probabilitas.ipynb
+     jupyter notebook notebooks/v2/analisis_statistika_probabilitas.ipynb
      ```
 3. Seluruh sel pada kedua notebook telah dieksekusi sebelumnya sehingga grafik, tabel perhitungan, dan luaran visualisasi dapat langsung dipelajari tanpa harus menjalankan ulang.
 
