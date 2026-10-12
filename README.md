@@ -27,8 +27,10 @@ statistic_data/
 ├── README.md                                             # Dokumentasi utama proyek dan dataset
 ├── dataset/
 │   └── dataset_serangan_jantung.csv                      # Berkas dataset utama (Kaggle)
-└── notebooks/
-    └── analisis_statistika_dan_probabilitas.ipynb        # Jupyter Notebook analisis statistika semester 3
+├── notebooks/
+│   └── analisis_statistika_dan_probabilitas.ipynb        # Jupyter Notebook analisis statistik versi 1 (11 modul)
+└── v2/
+    └── analisis_statistika_probabilitas.ipynb            # Jupyter Notebook analisis statistik versi 2 (7 modul kurikulum)
 ```
 
 ---
@@ -103,21 +105,66 @@ Berkas `notebooks/analisis_statistika_dan_probabilitas.ipynb` memuat implementas
 
 ---
 
-## 6. Petunjuk Menjalankan Notebook
+## 6. Cakupan Materi Analisis Notebook Versi 2 (`v2/analisis_statistika_probabilitas.ipynb`)
+Berkas notebook pada folder `v2/` disusun khusus mengikuti silabus perkuliahan kampus yang berfokus pada 7 topik inti dan mengevaluasi seluruh data populasi (79.583 pasien):
+
+1. **Pengantar Statistika dan Jenis Data**
+   - Definisi statistika deskriptif dan inferensial.
+   - Taksonomi skala pengukuran data (Kualitatif: Nominal, Ordinal; Kuantitatif: Interval, Rasio) serta sifat data (Diskrit vs Kontinu).
+   - Identifikasi metadata ke-16 variabel dataset dan strategi penanganan data hilang tanpa pemotongan baris data.
+2. **STATISTIKA DESKRIPTIF: Pemusatan Data & Visualisasi**
+   - Ukuran pemusatan: Mean, Median, Modus, dan analisis asimetri kurva.
+   - Distribusi frekuensi berkelompok menggunakan Aturan Sturges ($k = 1 + 3{,}322 \log_{10} n$).
+   - Visualisasi: Histogram dengan kurva KDE dan garis penanda pemusatan, kurva Ogive Positif dan Ogive Negatif, serta grafik batang frekuensi kejadian serangan jantung.
+3. **STATISTIKA DESKRIPTIF: Penyebaran Data & Dasar Probabilitas**
+   - Ukuran penyebaran: Jangkauan (*Range*), Kuartil ($Q_1, Q_2, Q_3$), $IQR$, deteksi pencilan metode Tukey, Varians sampel ($s^2$), Standar Deviasi ($s$), Standar Galat ($SE$), MAD, Koefisien Variasi ($CV$), Skewness, dan Kurtosis.
+   - Visualisasi boxplot komparatif antarkelompok status serangan jantung.
+   - Dasar probabilitas empiris, ruang sampel, titik sampel, aksioma Kolmogorov, peluang komplemen, dan verifikasi aturan penjumlahan peluang $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
+4. **PROBABILITAS LANJUTAN: Peluang Bersyarat, Independensi, dan Teorema Bayes**
+   - Peluang bersyarat $P(A \mid B)$ pada berbagai faktor risiko komorbid (merokok, diabetes, hipertensi).
+   - Ukuran asosiasi epidemiologi: Risiko Relatif (*Relative Risk* / RR).
+   - Uji independensi stokastik empiris: Evaluasi selisih antara $P(A \cap B)$ dan $P(A) \times P(B)$.
+   - Teorema Bayes dan hukum probabilitas total: Evaluasi probabilitas prior, likelihood, dan posterior faktor komorbiditas pada pasien serangan jantung, beserta visualisasi komparatifnya.
+5. **Peubah Acak Diskrit, Nilai Harapan, Distribusi Binomial & Poisson**
+   - Konsep peubah acak diskrit, Fungsi Massa Probabilitas (PMF), Nilai Harapan $E[X]$, dan Varians $\operatorname{Var}(X)$.
+   - Distribusi Binomial: Pemodelan jumlah pasien serangan jantung pada kelompok $n = 30$ orang dengan parameter $p$ dari populasi.
+   - Distribusi Poisson: Pemodelan laju kejadian peristiwa langka dengan $\lambda = n \times p$.
+   - Komparasi kurva PMF dan CDF antara Distribusi Binomial dan Poisson.
+6. **Peubah Acak Kontinu: PMF, PDF, dan CDF, Distribusi Normal, Z-Score & Aplikasi**
+   - Perbedaan fundamental matematis antara PMF (diskrit), PDF (kontinu), dan CDF.
+   - Pemodelan variabel kontinu Tekanan Darah Sistolik (SBP) dengan Distribusi Normal Gauss.
+   - Transformasi standardisasi skor Z ($Z = \frac{X - \mu}{\sigma}$) dan evaluasi empiris Aturan 68-95-99.7.
+   - Aplikasi klinis skor Z: Estimasi probabilitas teoretis vs aktual hipertensi tahap lanjut ($SBP \ge 140$ mmHg).
+7. **Populasi & Sampel, Teknik Sampling, Distribusi Sampling, dan Central Limit Theorem (CLT)**
+   - Konseptual: Perbedaan populasi vs sampel serta parameter vs statistik.
+   - Teknik sampling: Implementasi dan perbandingan *Simple Random Sampling* (SRS) vs *Stratified Random Sampling* ($n = 200$) terhadap parameter populasi sejati.
+   - Distribusi sampling: Konsep variasi rata-rata sampel antarkelompok dan penyusutan standar galat ($\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$).
+   - Central Limit Theorem (CLT): Simulasi komputasi dengan 1.000 replikasi pada ukuran sampel $n = 5, 30, 100, 500$, membuktikan konvergensi rata-rata sampel menuju kurva normal baku.
+   - Penerapan kasus nyata: Estimasi parameter rata-rata populasi menggunakan Selang Kepercayaan (*Confidence Interval* 95%).
+
+---
+
+## 7. Petunjuk Menjalankan Notebook
 Untuk membuka dan mengeksekusi analisis pada Jupyter Notebook:
 
 1. Pastikan dependensi Python telah terpasang:
    ```bash
    pip install pandas numpy scipy matplotlib seaborn scikit-learn notebook
    ```
-2. Buka berkas notebook menggunakan Jupyter Notebook atau VS Code:
-   ```bash
-   jupyter notebook notebooks/analisis_statistika_dan_probabilitas.ipynb
-   ```
-3. Seluruh sel telah dieksekusi sebelumnya sehingga grafik dan luaran tabel dapat langsung dipelajari tanpa harus menjalankan ulang.
+2. Buka salah satu berkas notebook menggunakan Jupyter Notebook atau VS Code:
+   - Untuk versi 1 (11 modul analisis):
+     ```bash
+     jupyter notebook notebooks/analisis_statistika_dan_probabilitas.ipynb
+     ```
+   - Untuk versi 2 (7 modul kurikulum silabus):
+     ```bash
+     jupyter notebook v2/analisis_statistika_probabilitas.ipynb
+     ```
+3. Seluruh sel pada kedua notebook telah dieksekusi sebelumnya sehingga grafik, tabel perhitungan, dan luaran visualisasi dapat langsung dipelajari tanpa harus menjalankan ulang.
 
 ---
 
-## 7. Ketentuan Dokumentasi
+## 8. Ketentuan Dokumentasi
 - Setiap kali terdapat **perubahan besar** pada proyek (penambahan skrip analisis, perubahan alur, transformasi dataset, dll.), berkas `README.md` ini wajib diperbarui agar selalu mencerminkan kondisi terkini proyek.
 - Seluruh isi dokumentasi wajib menggunakan Bahasa Indonesia dan tidak memuat emoji sesuai pedoman pada `AGENTS.md`.
+
