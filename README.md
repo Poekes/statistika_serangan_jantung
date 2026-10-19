@@ -41,7 +41,11 @@ statistic_data/
 │   └── style.css                                         # Gaya desain modern dark theme & visualisasi responsif
 └── presentasi2/ (alias: presensi2)
     ├── app.js                                            # Logika interaktif slide 19 poin dan integrasi Chart.js
+    ├── generate_pptx.py                                  # Skrip otomasi tangkapan layar slide ke format PowerPoint (PPTX)
     ├── index.html                                        # Aplikasi slide tayang khusus 19 poin persis penugasan UTS
+    ├── presentasi.pptx                                   # Berkas presentasi PPTX widescreen 16:9 siap tayang
+    ├── presentasi_analisis_faktor_risiko_serangan_jantung.pptx # Salinan berkas presentasi PPTX (nama deskriptif)
+    ├── screenshots/                                      # Direktori tangkapan layar 19 slide format PNG (resolusi 1920x1080)
     └── style.css                                         # Desain tata letak visual modern & responsif
 ```
 
@@ -194,6 +198,16 @@ Tombol pintasan keyboard selama presentasi:
 - `F`: Mengaktifkan atau menonaktifkan mode layar penuh (*fullscreen*).
 - `O`: Membuka laci ringkasan seluruh slide (*grid overview*) untuk berpindah ke slide mana pun.
 - `Home` / `End`: Menuju ke slide pertama atau terakhir.
+
+### Presentasi PowerPoint (.pptx)
+Tersedia berkas presentasi PowerPoint siap tayang dalam rasio layar lebar 16:9 yang dibuat dari tangkapan layar beresolusi tinggi (Full HD 1080p) seluruh 19 slide:
+- `presentasi2/presentasi.pptx` (atau `presentasi2/presentasi_analisis_faktor_risiko_serangan_jantung.pptx`).
+
+Jika ingin memperbarui tangkapan layar dan meregenerasi berkas PowerPoint secara otomatis:
+```bash
+python3 presentasi2/generate_pptx.py
+```
+Skrip ini akan membuka Chrome secara otomatis (headless), mengambil tangkapan layar 19 slide secara berurutan, dan menyimpannya ke dalam berkas presentasi PPTX.
 
 ---
 
