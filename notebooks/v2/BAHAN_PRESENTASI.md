@@ -17,6 +17,7 @@ Dokumen ini disusun sebagai panduan bahan tayang dan naskah presentasi analisis 
 | 1 | Muhamad Nur Akbar | 250111019 |
 | 2 | Taufan Nur Saffarudin | 250111033 |
 | 3 | Fathul Nur Hidayat | 250111011 |
+| 4 | M Lintang Karno | 250111016 |
 
 * **Tingkat / Semester**: Semester 3
 * **Mata Kuliah**: Statistika dan Probabilitas
